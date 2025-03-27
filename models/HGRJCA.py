@@ -13,9 +13,9 @@ from .layer import LSTM
 #from .audguide_att import BottomUpExtract
 #from .şelfattention import SelfAttentionModel
 
-class DCA_cam(nn.Module):
+class HGRJCA_cam(nn.Module):
     def __init__(self):
-        super(DCA_cam, self).__init__()
+        super(HGRJCA_cam, self).__init__()
         #self.corr_weights = torch.nn.Parameter(torch.empty(
         #        1024, 1024, requires_grad=True).type(torch.cuda.FloatTensor))
 
