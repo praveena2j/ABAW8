@@ -1,4 +1,4 @@
-In this work, we present two audio-visual fusion models : Gated Recursive Joint Cross Attention and Hierarchical Gated Recursive Joint Cross Attention for dimensional emotion recognition. We submitted our results on test set for Valence-arousal challenge of 8th ABAW competition and achieved second place. 
+In this work, we present two audio-visual fusion models : Gated Recursive Joint Cross Attention and Hierarchical Gated Recursive Joint Cross Attention for dimensional emotion recognition. We submitted our results on test set for Valence-arousal challenge of 8th ABAW competition (https://affective-behavior-analysis-in-the-wild.github.io/8th/) and achieved second place. 
 
 ## References
 If you find this work useful in your research, please consider citing our work :pencil: and giving a star :star2: :
