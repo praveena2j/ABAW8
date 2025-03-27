@@ -3,7 +3,7 @@ from models.temporal_convolutional_model import TemporalConvNet
 from models.transformer import MultimodalTransformerEncoder, IntraModalTransformerEncoder, InterModalTransformerEncoder
 from models.backbone import VisualBackbone, AudioBackbone
 from .av_crossatten import DCNLayer
-from .DCA import DCA_cam
+from .HGRJCA import HGRJCA_cam
 
 import math
 import os
@@ -397,7 +397,7 @@ class LFAN(nn.Module):
         #self.coattn = DCNLayer(256, 128, 128, 4, 0.6)
 
 
-        self.DCA = DCA_cam()
+        self.HGRJCA = HGRJCA_cam()
 
         #self.regressor = nn.Linear(384, self.output_dim)
         self.regressor1 = nn.Linear(384, 256)
@@ -432,7 +432,7 @@ class LFAN(nn.Module):
             X[modal] = self.bn[modal](X[modal]).transpose(1, 2)
            
 
-        c = self.DCA(X['video'], X['logmel'])
+        c = self.HGRJCA(X['video'], X['logmel'])
         #video, audio, text = self.coattn(X['video'], X['logmel'], X['bert'])
         #follower = self.fusion(X)
         #c = torch.cat((video, audio, text), dim=-1)
